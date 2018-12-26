@@ -26,24 +26,24 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c3a95609c9547334b3bf.js"
+    "url": "webpack-runtime-6b7b39638ad3b8ae13c0.js"
   },
   {
-    "url": "app-087bdc6745dd1d6f69f5.js"
+    "url": "app-25b678db6ad92dde8db4.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-9538d068e15af3827374.js"
   },
   {
     "url": "index.html",
-    "revision": "31a94dd2811af644f0a5bcfd7c952a4b"
+    "revision": "829f8c31bce13e3f0fb3e4c761a0bb3a"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d4b75d94a7d8384a23eb41ac2441b5b8"
+    "revision": "c995e4a2872a8fa86c6801c018e7b5af"
   },
   {
-    "url": "1.6a160944e05fd46629b2.css"
+    "url": "1.1a286e56a97d64361307.css"
   },
   {
     "url": "1-75c9239ef1142b120176.js"
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "component---src-pages-index-js-cb6a5dd1aff2eccbc52d.js"
   },
   {
-    "url": "0-1af74a1caa4becaaa152.js"
+    "url": "0-a53fcd27223dad0719cc.js"
   },
   {
     "url": "static/d/173/path---index-6a9-NZuapzHg3X9TaN1iIixfv1W23E.json",
@@ -77,7 +77,7 @@ self.__precacheManifest = [
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/smaltman-wedding/offline-plugin-app-shell-fallback/index.html", {
+workbox.routing.registerNavigationRoute("/offline-plugin-app-shell-fallback/index.html", {
   whitelist: [/^[^?]*([^.?]{5}|\.html)(\?.*)?$/],
   blacklist: [/\?(.+&)?no-cache=1$/],
 });
