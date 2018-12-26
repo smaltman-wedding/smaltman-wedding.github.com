@@ -4,21 +4,21 @@ import PropTypes from 'prop-types'
 const Header = (props) => (
     <header id="header" style={props.timeout ? {display: 'none'} : {}}>
         <div className="logo">
-            <span className="icon fa-diamond"></span>
+            SMALTMAN
         </div>
         <div className="content">
             <div className="inner">
-                <h1>Dimension</h1>
-                <p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-                for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+                <h1>Rachael & Greg are getting married</h1>
+                <p>Saturday March 16th, 2019 at 4:30 PM at the <a href="https://goo.gl/maps/DudTveK9uUx" target="_blank">Los 
+                Angeles River Center and Gardens</a></p>
             </div>
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Intro</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('story')}}>Our Story</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('venue')}}>&nbsp;&nbsp;Venue&nbsp;&nbsp;&nbsp;</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('visiting')}}>Visiting LA</a></li>
+                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('registry')}}>Registry</a></li>
             </ul>
         </nav>
     </header>
