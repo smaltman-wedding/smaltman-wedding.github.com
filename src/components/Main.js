@@ -37,7 +37,7 @@ class Main extends React.Component {
         </article>
 
         <article id="contact" className={`${this.props.article === 'rsvp' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <iframe height='600' width='550' src="https://goo.gl/forms/jVth3alLZUadLYin2"></iframe>
+          <iframe height='600' style={{width: '100%'}} src="https://goo.gl/forms/jVth3alLZUadLYin2"></iframe>
           {close}
         </article>
 
