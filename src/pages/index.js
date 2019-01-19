@@ -9,10 +9,10 @@ class IndexPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isArticleVisible: false,
+      isArticleVisible: !!props.article,
       timeout: false,
       articleTimeout: false,
-      article: '',
+      article: props.article || '',
       loading: 'is-loading'
     }
     this.handleOpenArticle = this.handleOpenArticle.bind(this)
@@ -26,6 +26,20 @@ class IndexPage extends React.Component {
         this.setState({loading: ''});
     }, 100);
     document.addEventListener('mousedown', this.handleClickOutside);
+
+    if (this.props.article) {
+      setTimeout(() => {
+        this.setState({
+          timeout: !this.state.timeout
+        })
+      }, 325)
+
+      setTimeout(() => {
+        this.setState({
+          articleTimeout: !this.state.articleTimeout
+        })
+      }, 350)
+    }
   }
 
   componentWillUnmount () {
