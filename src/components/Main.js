@@ -39,8 +39,8 @@ class Main extends React.Component {
           <h3 className="major">Gifts</h3>
           <div>
             <p>
-              Having you there with us is all the gift we need, but if you're so inclined, we'd
-              honored if you would donate in our names to any of the following organizations:
+              Your presence is a gift in itself. If you are so inclined, we would be honored if you would
+              donate in our names to any of the following organizations:
             </p>
             <ul className='gifts'>
               {
