@@ -9,7 +9,7 @@ const Header = (props) => (
         <div className="content">
             <div className="inner">
                 <h1>Rachael & Greg are getting married</h1>
-                <p>Saturday March 16th, 2019 at 4:30 PM at the <a href="https://goo.gl/maps/DudTveK9uUx" target="_blank">Los
+                <p>Saturday March 16th, 2019 at 4:30 PM at the <a rel="noopener noreferrer" href="https://goo.gl/maps/DudTveK9uUx" target="_blank">Los
                 Angeles River Center and Gardens</a></p>
             </div>
         </div>

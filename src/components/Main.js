@@ -32,10 +32,52 @@ class Main extends React.Component {
           <p>We look forward to having you join us at the Los Angeles River Center & Gardens on March 16, 2019. The beautiful wrought-iron gates will open at 4:30 and the ceremony will take place in the San Fernando Courtyard. Dress your best though there is no particular dress code.</p>
           <h3 className="major">The Venue</h3>
           <p>It was important to us to choose a beautiful venue that allowed us to give back to the community and environment. With the Los Angeles River Center, we got all of that, along with some bonus sentimental value. Now owned and managed by the nonprofit Mountains Recreation and Conservation Authority, dedicated to the preservation of public parkland, the LA River Center is located at the site of the former Lawry’s California Center, a restaurant that was near and dear to the Small family. Rachael’s bubbie, Eleanor Small, and zaydie, Abraham Small, loved the Lawry’s California Center and would bring the family there regularly for special occasions, including birthdays and mother’s day. Now, with Rachael and Greg’s wedding, the space will once more be a site of celebration, which we know would have moved Eleanor and Abraham and made them very happy.</p>
-          <h3 className="major">The ceremony</h3>
+          <h3 className="major">The Ceremony</h3>
           <p>We are grateful to our wonderful friends, who will animate our celebration with their talents.</p>
           <p>We will be married by Nathan Rodriguez. Nathan and Greg met in 4th grade and have been great friends ever since, performing in high school plays and musicals together and having many adventures on both coasts. Nathan, Rachael, and Greg lived together in Brooklyn.</p>
           <p>Ceremony music will be provided by Karl McComas Reichl on solo cello. Rachael and Greg met Karl and his wife Lesley while all were living in Iowa City. They spent many evenings in Karl and Lesley’s cozy cottage, cooking and laughing and playing with their brilliant dog, Dinah.</p>
+          <h3 className="major">Gifts</h3>
+          <div>
+            <p>
+              Having you there with us is all the gift we need, but if you're so inclined, we'd
+              honored if you would donate in our names to any of the following organizations:
+            </p>
+            <ul className='gifts'>
+              {
+                (
+                  (a) => {
+                    // shuffle a
+                    for (let i = a.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [a[i], a[j]] = [a[j], a[i]];
+                    }
+                    return a;
+                  }
+                )([
+                  ["Electronic Fronteir Foundation", "https://supporters.eff.org/donate/join-4"],
+                  ["Books Through Bars", "https://booksthroughbarsnyc.org/donate/"],
+                  ["Words Without Borders", "https://www.wordswithoutborders.org/donate/"],
+                  ["National Book Foundation", "https://www.nationalbook.org/get-involved/donate/"],
+                  ["Planned Parenthood", "https://www.weareplannedparenthood.org/onlineactions/cOJVhOyrzkq4uBcxVekXFA2?unpubredirect=true&affiliateID=090330"],
+                  ["Goodwill", "http://give.goodwill.org"],
+                  ["New Yorkers for Parks", "http://www.ny4p.org/"],
+                  ["Black Lives Matter", "https://blacklivesmatter.com/take-action/donate/"],
+                  ["CAIR", "https://www.cair.com/donate"],
+                  ["Code.org", "https://donate.code.org/"],
+                  ["Girls Who Code", "https://www.classy.org/give/77372/#!/donation/checkout"],
+                  ["Girls Write Now", "https://www.girlswritenow.org/givewritenow/"]
+                ]).map(
+                  item => (
+                    <li key={item[1]}>
+                      <a rel="noopener noreferrer" target="_blank" href={item[1]}>
+                        {item[0]}
+                      </a>
+                    </li>
+                  )
+                )
+              }
+            </ul>
+          </div>
           <h3 className="major">Parking</h3>
           <p>The LA River Center has a beautiful spacious (and free) parking lot that will be reserved for our guests. You’re welcome to leave your car overnight, as long as you pick it up by 10am on Sunday, the 17th.</p>
           {close}
