@@ -6,6 +6,8 @@ import pic02 from '../images/rachgreg2.jpg'
 import pic03 from '../images/rachgreg3.jpg'
 import pic04 from '../images/rachgreg4.jpg'
 
+const Link = ({to, children}) => <a rel="noopener noreferrer" target="_blank" href={to}>{children}</a>
+
 class Main extends React.Component {
   render() {
 
@@ -69,9 +71,7 @@ class Main extends React.Component {
                 ]).map(
                   item => (
                     <li key={item[1]}>
-                      <a rel="noopener noreferrer" target="_blank" href={item[1]}>
-                        {item[0]}
-                      </a>
+                      <Link to={item[1]}>{item[0]}</Link>
                     </li>
                   )
                 )
@@ -84,8 +84,51 @@ class Main extends React.Component {
         </article>
 
         <article id="about" className={`${this.props.article === 'visiting' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Visiting LA</h2>
-          <p>Coming soon!</p>
+          <h2 className="major">Visiting Los Angeles</h2>
+
+          <h3 className="major">Where To Stay</h3>
+          <p>
+            If you're using <Link to='http://airbnb.com'>Airbnb</Link>/<Link to='https://www.vrbo.com'>VRBO</Link>,
+            and want to stay near the venue, we recommend searching the following neighborhoods:
+              <ul className='gifts'>
+                <li>Highland Park</li>
+                <li>Mount Washington</li>
+                <li>Atwater Village</li>
+                <li>Los Feliz</li>
+                <li>Echo Park</li>
+                <li>Silverlake</li>
+                <li>Eagle Rock</li>
+              </ul>
+          </p>
+          <p>
+            If hotels are more your style, then we recommend looking in Downtown LA or Pasadena. Here
+            are some great options (but only a very partial list):
+            <ul className='gifts'>
+              <li><Link to="https://freehandhotels.com/los-angeles/">Freehand Hotel</Link></li>
+              <li><Link to="https://www.thenomadhotel.com/los-angeles">Nomad Hotel</Link></li>
+              <li><Link to="https://www.hotelfigueroa.com">Hotel Figueroa</Link></li>
+              <li><Link to="https://www.millenniumhotels.com/en/los-angeles/millennium-biltmore-hotel-los-angeles/">Biltmore Hotel</Link></li>
+            </ul>
+          </p>
+          <h3 className="major">Where To Eat</h3>
+          <p>These are some spots we always try to hit when we're in town</p>
+          <ul>
+            <li><Link to="https://www.yelp.com/biz/nicks-coffee-shop-los-angeles-4">Nick's</Link> — The diner to end all diners. Best hashbrowns on Earth.</li>
+            <li><Link to="https://www.yelp.com/biz/torung-restaurant-los-angeles">Torung Thai</Link> — Cheap and good late night Thai food</li>
+            <li><Link to="https://www.yelp.com/biz/el-chato-taco-truck-los-angeles-2">El Chato Taco Truck</Link> — LA's best Taco Truck open Tues-Sat nights located a couple blocks from where Greg and Rachael met</li>
+            <li><Link to="https://www.yelp.com/biz/noshi-sushi-los-angeles">Noshi Sushi</Link> — Unpretentious and delicious sushi</li>
+            <li><Link to="https://www.yelp.com/biz/bcd-tofu-house-los-angeles">BCD Tofu House</Link> — Koreatown Favorite that we're lucky enough to have in NYC</li>
+          </ul>
+          <h3 className="major">Bookstores</h3>
+            <p><Link to='https://www.skylightbooks.com/'>Skylight</Link> — Rachael’s favorite bookstore in the world, in the heart of Los Feliz. When you stop by, be sure to check out their translated literature display, greet the beautiful store cat, and sit a spell under the gorgeous tree in the middle. And if art books are more your thing, check out the art book annex a couple doors down.</p>
+            <p><Link to='https://www.chevaliersbooks.com/'>Chevaliers</Link> — A staple of Larchmont, the heart of the neighborhood Rachael grew up in, Chevaliers has transformed from a dusty neighborhood bookshop to a cultural center, with vibrant events and a fantastically curated selection.</p>
+            <p><Link to='http://lastbookstorela.com/'>The Last Bookstore</Link> — Downtown LA’s coolest space, the downstairs is a big, airy mix of books, comics, and music, but be sure to venture upstairs. There you’ll find the storied used book labyrinth (just do an image search to see how cool it is), as well as various artists’ studios that you can peek into.</p>
+          <h3 className="major">Coffee</h3>
+            <ul>
+              <li><Link to='https://www.caffeluxxe.com/'>Caffe Luxxe</Link> — Slinging great espresso in LA since before it was cool.</li>
+              <li><Link to='https://www.groundworkcoffee.com/'>Groundwork</Link> — Exemplary coffee roasters of the LA area.</li>
+              <li><Link to='https://www.conservatorycoffeeandtea.com/'>The Conservatory</Link> — Downtown Culver City's finest coffee staple.</li>
+            </ul>
           {close}
         </article>
 
