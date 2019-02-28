@@ -31,7 +31,7 @@ class Main extends React.Component {
 
         <article id="work" className={`${this.props.article === 'venue' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">The Big Day</h2>
-          <p>We look forward to having you join us at the Los Angeles River Center & Gardens on March 16, 2019. The beautiful wrought-iron gates will open at 4:30 and the ceremony will take place in the San Fernando Courtyard. Dress your best though there is no particular dress code.</p>
+          <p>We look forward to having you join us at the Los Angeles River Center & Gardens on March 16, 2019. At 4:30, the ceremony will take place in the San Fernando Courtyard. Dress your best though there is no particular dress code.</p>
           <h3 className="major">The Venue</h3>
           <p>It was important to us to choose a beautiful venue that allowed us to give back to the community and environment. With the Los Angeles River Center, we got all of that, along with some bonus sentimental value. Now owned and managed by the nonprofit Mountains Recreation and Conservation Authority, dedicated to the preservation of public parkland, the LA River Center is located at the site of the former Lawry’s California Center, a restaurant that was near and dear to the Small family. Rachael’s bubbie, Eleanor Small, and zaydie, Abraham Small, loved the Lawry’s California Center and would bring the family there regularly for special occasions, including birthdays and mother’s day. Now, with Rachael and Greg’s wedding, the space will once more be a site of celebration, which we know would have moved Eleanor and Abraham and made them very happy.</p>
           <h3 className="major">The Ceremony</h3>
